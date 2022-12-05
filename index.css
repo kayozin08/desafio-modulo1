@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Comecei a fazer a header pelo desktop por causa do menu hamburguer 
-  que é chatinho aqui no css puro e não sei se deixo funcional.*/
 
 header {
   display: flex;
@@ -201,4 +196,137 @@ footer .footer__copy .topo {
   footer .footer__copy .topo {
     display: none;
   }
+}
+
+
+main .banner {
+  width: 100%;
+  height: 545px;
+  background-image: url('./images/banner-mobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media(min-width:321px) {
+  main .banner {
+    background-size: cover;
+  }
+}
+
+@media(min-width:990px){
+  main .banner {
+    width: 100%;
+    background-image: url('./images/banner-desktop.png');
+    justify-content: flex-start;
+    padding: 220px 0 0 30px;
+  }
+
+  main .banner div {
+    display: flex;
+  } 
+}
+
+main .banner h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  padding-left: 40px;
+}
+
+@media(min-width:990px) {
+  main .banner h2 {
+    font-size: 55px;
+    transition: .5s ease-in-out;
+  }
+
+  main .banner h2:hover {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+
+main .banner a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #d3d3d3;
+  font-size: 18px;
+  padding: 16px 0 25px 42px;
+  transition: .8s ease;
+}
+
+@media(min-width:990px) {
+  main .banner a {
+    padding-top: 28px;
+    font-size: 22px;
+  }
+  main .banner a:hover {
+    text-decoration: underline;
+    font-size: 24px;
+  }
+}
+
+main .galeria {
+  margin-top: 30px;
+}
+
+@media(min-width:1025px) {
+  main .galeria {
+    margin: 80px 0;
+  }
+}
+
+main .galeria .galeria__images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media(min-width:990px) and (max-width: 1024px) {
+  main .galeria .galeria__images {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+
+@media(min-width: 1025px) {
+  main .galeria .galeria__images {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+main .galeria .galeria__images img {
+  width: 80%;
+  margin: 15px 0;
+  transition: .9s ease-in-out;
+}
+
+@media(min-width:990px) {
+  main .galeria .galeria__images img {
+    width: 280px;
+    height: 280px;
+    margin: 10px 8px;
+  }
+}
+
+@media(min-width:990px) and (max-width: 1024px) {
+  main .galeria .galeria__images img {
+    width: 200px;
+    height: 200px;
+    margin: 15px 0px;
+  }
+}
+
+main .galeria .galeria__images img:hover {
+  transform: scale(1, 1);
+  -webkit-transform: scale(1.1);
+}
+main .galeria .galeria__images img:active {
+  transform: scale(1, 1);
+  -webkit-transform: scale(1.1);
 }
