@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Comecei a fazer a header pelo desktop por causa do menu hamburguer 
+  que é chatinho aqui no css puro e não sei se deixo funcional.*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  height: 80px;
+  margin: 0 50px;
+}
+
+@media(max-width: 989px) {
+  header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 0;
+  }
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #000;
+  font-size: 28px;
+}
+
+@media(max-width: 989px) {
+  header h1 a {
+    padding-left: 50px;
+  }
+}
+
+header .burguer {
+  display: none;
+  width: 90px;
+  height: 100%;
+}
+
+@media(max-width: 989px) {
+  header .burguer {
+    display: block;
+    background-color: #000;
+  }
+
+  header .burguer button {
+    border: none;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+  }
+
+  header .burguer button i {
+    color: #fff;
+    font-size: 55px;
+    padding: 12px 0 0 17px;
+    
+  }
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+
+@media(max-width: 989px){
+  header nav {
+    display: none;
+  }
+}
+
+header nav ul .links a {
+  text-decoration: none;
+  color: #CCCCCC;
+  font-weight: 800;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+
+header nav ul .links a:hover {
+  color: #000;
+  font-size: 18px;
+}
+
+header nav ul .links .link--active {
+  color: #000;
+  font-size: 18px;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+@media(min-width: 1025px) {
+  footer {
+    flex-direction: row;
+    background-color: #CCCCCC;
+    padding-left: 70px;
+  }
+}
+
+footer nav {
+  width: 85%;
+  background-color: #7FDBD4;
+}
+
+@media(min-width:990px) {
+  footer nav {
+    width: 100%;
+    background-color: #CCCCCC;
+  }
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5px;
+}
+
+footer nav ul li a img {
+  width: 30px;
+  height: 30px;
+}
+
+footer .footer__copy {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+footer .footer__copy div {
+  width: 75vw;
+}
+
+@media(min-width:990px) {
+  footer .footer__copy div {
+    display: flex;
+    align-items: center;
+    padding-left: 75px;
+  }
+}
+
+footer .footer__copy div p {
+  font-size: 8px;
+  width: 50vw;
+  color: #d3d3d3;
+}
+
+@media(min-width:990px) {
+  footer .footer__copy div h4 {
+    margin-right: 20px;
+  }
+  footer .footer__copy div p {
+    width: 450px;
+    font-size: 15px;
+    color: #fff;
+  }
+}
+
+footer .footer__copy div p a{
+  color: #d3d3d3;
+}
+
+@media(min-width:990px) {
+  footer .footer__copy div p a{
+    color: #fff;
+  }
+}
+
+footer .footer__copy div p a:active {
+  color: #7FDBD4;
+}
+
+footer .footer__copy .topo {
+  text-decoration: none;
+  width: 30%;
+  height: 40px;
+  background-color: #333333;
+  color: #CCCCCC;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+}
+
+@media(min-width:990px) {
+  footer .footer__copy .topo {
+    display: none;
+  }
+}
